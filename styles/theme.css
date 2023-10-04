@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('../styles/theme.css');
-
 @layer utilities {
 	.background-light850_dark100 {
 		@apply bg-light-850 dark:bg-dark-100;
