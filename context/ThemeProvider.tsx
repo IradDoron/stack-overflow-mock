@@ -2,7 +2,12 @@
 
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
-const ThemeContext = createContext({});
+type ThemeContextType = {
+	mode: string;
+	setMode: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const ThemeContext = createContext({} as ThemeContextType);
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 	const [mode, setMode] = useState('light');
