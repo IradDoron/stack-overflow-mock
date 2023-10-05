@@ -7,7 +7,6 @@ const HomePage = () => {
 			<h1>Not with class</h1>
 			<h2 className='h2-bold'>Hello World</h2>
 			<h2>Not with class</h2>
-			<UserButton afterSignOutUrl='/' />
 		</div>
 	);
 };

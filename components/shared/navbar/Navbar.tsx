@@ -1,3 +1,4 @@
+import { SignedIn, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,7 +12,28 @@ const Navbar = () => {
 					height={23}
 					alt='Stack Overflow Mock'
 				/>
+				<p className='h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden'>
+					Stack Overflow
+					<span className='text-primary-500'>Mock</span>
+				</p>
 			</Link>
+			GlobalSearch
+			<div>
+				Theme
+				<SignedIn>
+					<UserButton
+						afterSignOutUrl='/'
+						appearance={{
+							elements: {
+								avatarBox: 'h-10 w-10',
+							},
+							variables: {
+								colorPrimary: '#ff7000',
+							},
+						}}
+					/>
+				</SignedIn>
+			</div>
 		</nav>
 	);
 };
